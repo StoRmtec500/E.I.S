@@ -21,6 +21,9 @@
 		3723B84517965E8000712A29 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3723B84317965E8000712A29 /* InfoPlist.strings */; };
 		3723B84717965E8000712A29 /* E_I_STests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3723B84617965E8000712A29 /* E_I_STests.m */; };
 		3723B85217967F4100712A29 /* HauptViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3723B85117967EDB00712A29 /* HauptViewController.m */; };
+		3748775B1796BADE004C58AB /* HydrantMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3748775A1796BA5E004C58AB /* HydrantMapViewController.m */; };
+		3748775D1796C76C004C58AB /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3748775C1796C76C004C58AB /* MapKit.framework */; };
+		3748775F1796D48E004C58AB /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3748775E1796D48E004C58AB /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +56,10 @@
 		3723B84617965E8000712A29 /* E_I_STests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = E_I_STests.m; sourceTree = "<group>"; };
 		3723B85017967EDB00712A29 /* HauptViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HauptViewController.h; sourceTree = "<group>"; };
 		3723B85117967EDB00712A29 /* HauptViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HauptViewController.m; sourceTree = "<group>"; };
+		374877591796BA5E004C58AB /* HydrantMapViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HydrantMapViewController.h; sourceTree = "<group>"; };
+		3748775A1796BA5E004C58AB /* HydrantMapViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HydrantMapViewController.m; sourceTree = "<group>"; };
+		3748775C1796C76C004C58AB /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		3748775E1796D48E004C58AB /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +67,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3748775F1796D48E004C58AB /* CoreLocation.framework in Frameworks */,
+				3748775D1796C76C004C58AB /* MapKit.framework in Frameworks */,
 				3723B81E17965E7F00712A29 /* CoreGraphics.framework in Frameworks */,
 				3723B82017965E7F00712A29 /* UIKit.framework in Frameworks */,
 				3723B81C17965E7F00712A29 /* Foundation.framework in Frameworks */,
@@ -101,6 +110,8 @@
 		3723B81A17965E7F00712A29 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3748775E1796D48E004C58AB /* CoreLocation.framework */,
+				3748775C1796C76C004C58AB /* MapKit.framework */,
 				3723B81B17965E7F00712A29 /* Foundation.framework */,
 				3723B81D17965E7F00712A29 /* CoreGraphics.framework */,
 				3723B81F17965E7F00712A29 /* UIKit.framework */,
@@ -119,6 +130,8 @@
 				3723B82217965E7F00712A29 /* Supporting Files */,
 				3723B85017967EDB00712A29 /* HauptViewController.h */,
 				3723B85117967EDB00712A29 /* HauptViewController.m */,
+				374877591796BA5E004C58AB /* HydrantMapViewController.h */,
+				3748775A1796BA5E004C58AB /* HydrantMapViewController.m */,
 			);
 			path = E.I.S;
 			sourceTree = "<group>";
@@ -249,6 +262,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3748775B1796BADE004C58AB /* HydrantMapViewController.m in Sources */,
 				3723B85217967F4100712A29 /* HauptViewController.m in Sources */,
 				3723B82C17965E8000712A29 /* AppDelegate.m in Sources */,
 				3723B82817965E7F00712A29 /* main.m in Sources */,

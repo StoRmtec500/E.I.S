@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "HydrantMapViewController.h"
 
 @implementation AppDelegate
 

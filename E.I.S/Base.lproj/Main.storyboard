@@ -8,7 +8,7 @@
         <!--Navigation Controller-->
         <scene sceneID="sW3-ot-IpT">
             <objects>
-                <navigationController definesPresentationContext="YES" navigationBarHidden="YES" id="mgI-Ji-5w9" sceneMemberID="viewController">
+                <navigationController definesPresentationContext="YES" id="mgI-Ji-5w9" sceneMemberID="viewController">
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackOpaque"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="SZc-aP-IGH">
@@ -26,16 +26,16 @@
             </objects>
             <point key="canvasLocation" x="-577" y="-273"/>
         </scene>
-        <!--Haupt View Controller-->
+        <!--Haupt View Controller - Hauptmenü-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="HauptViewController" sceneMemberID="viewController">
+                <viewController title="Hauptmenü" id="BYZ-38-t0r" customClass="HauptViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="G59-N7-iCy"/>
                         <viewControllerLayoutGuide type="bottom" id="0D9-PS-RHe"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="20" width="1024" height="748"/>
+                        <rect key="frame" x="0.0" y="64" width="1024" height="704"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="lblCopyright" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jbS-rj-5cS">
@@ -70,12 +70,15 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="qwd-V9-Ch6" kind="push" id="0e4-dd-w7G"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.98823529481887817" green="0.039215687662363052" blue="0.10980392247438431" alpha="1" colorSpace="calibratedRGB"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
-                    <navigationItem key="navigationItem" id="2Za-Pw-5pu"/>
+                    <navigationItem key="navigationItem" title="E.I.S Übersicht" id="2Za-Pw-5pu"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
                         <outlet property="lblCopyright" destination="jbS-rj-5cS" id="tYe-Fv-kXx"/>
@@ -86,6 +89,37 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="612" y="-273"/>
+        </scene>
+        <!--Hydrant Map View Controller - Hydranten - Übersicht-->
+        <scene sceneID="YXr-6y-MiE">
+            <objects>
+                <viewController id="qwd-V9-Ch6" customClass="HydrantMapViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="F7R-9t-dez"/>
+                        <viewControllerLayoutGuide type="bottom" id="TMN-b8-eEf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="UKf-U2-RP5">
+                        <rect key="frame" x="0.0" y="64" width="1024" height="704"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="satellite" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="k3q-oi-z64">
+                                <rect key="frame" x="10" y="10" width="1004" height="684"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.98823529481887817" green="0.039215687662363052" blue="0.10980392247438431" alpha="1" colorSpace="calibratedRGB"/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Hydranten - Übersicht" id="NiK-Dj-NhG"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackOpaque"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <connections>
+                        <outlet property="mapView" destination="k3q-oi-z64" id="Riz-yz-fgC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZeN-oa-sbt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1626" y="-1347"/>
         </scene>
     </scenes>
     <resources>
