@@ -7,6 +7,7 @@
 //
 
 #import "HauptViewController.h"
+#import "SWRevealViewController.h"
 
 @interface HauptViewController ()
 
@@ -27,6 +28,14 @@
 
 - (void)viewDidLoad
 {
+   // _sidebarButton.tintColor = [UIColor colorWithWhite:0.96f alpha:0.2f];
+    
+   // _sidebarButton.target = self.revealViewController;
+   // _sidebarButton.action = @selector(revealToggle:);
+    
+   // [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
+    
+    
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     lblVersion.text = @"Version: Beta1";

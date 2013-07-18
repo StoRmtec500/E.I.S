@@ -14,5 +14,6 @@
     MKMapView *mapView;
 }
 @property (strong, nonatomic) IBOutlet MKMapView *mapView;
+@property (strong, nonatomic) IBOutlet UIBarButtonItem *sidebarButton;
 
 @end

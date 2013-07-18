@@ -7,6 +7,7 @@
 //
 
 #import "HydrantMapViewController.h"
+#import "SWRevealViewController.h"
 
 @interface HydrantMapViewController ()
 
@@ -28,6 +29,13 @@
 
 - (void)viewDidLoad
 {
+    self.navigationItem.title =@"Hydrant";
+    
+    _sidebarButton.tintColor = [UIColor colorWithWhite:0.2f alpha:1.0f];
+    _sidebarButton.target = self.revealViewController;
+    _sidebarButton.action = @selector(revealToggle:);
+    
+    [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
     [super viewDidLoad];
     mapView.delegate = self;
 	// Do any additional setup after loading the view.

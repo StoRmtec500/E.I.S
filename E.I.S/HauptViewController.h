@@ -12,5 +12,7 @@
 @property (strong, nonatomic) IBOutlet UILabel *lblVersion;
 @property (strong, nonatomic) IBOutlet UILabel *lblCopyright;
 @property (strong, nonatomic) IBOutlet UILabel *lblHeaderText;
+@property (strong, nonatomic) IBOutlet UIBarButtonItem *sidebarButton;
+//@property (strong, nonatomic) IBOutlet UIImageView *sidebarButton;
 
 @end
