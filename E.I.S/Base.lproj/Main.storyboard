@@ -145,7 +145,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="FAh-Ry-PPd" kind="push" id="HHO-lN-uxK"/>
+                                    <segue destination="FAh-Ry-PPd" kind="push" id="9gU-Rl-v1a"/>
                                 </connections>
                             </tableViewCell>
                             <tableViewCell contentMode="scaleToFill" restorationIdentifier="title" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="test" id="xn9-dk-yxg">
