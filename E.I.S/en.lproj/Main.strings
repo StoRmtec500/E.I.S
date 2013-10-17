@@ -1,0 +1,33 @@
+
+/* Class = "IBUINavigationItem"; title = "E.I.S Übersicht"; ObjectID = "2Za-Pw-5pu"; */
+"2Za-Pw-5pu.title" = "E.I.S Übersicht";
+
+/* Class = "IBUIViewController"; title = "Hauptmenü"; ObjectID = "BYZ-38-t0r"; */
+"BYZ-38-t0r.title" = "Hauptmenü";
+
+/* Class = "IBUINavigationItem"; title = "Hydranten - Übersicht"; ObjectID = "NiK-Dj-NhG"; */
+"NiK-Dj-NhG.title" = "Hydranten - Übersicht";
+
+/* Class = "IBUILabel"; text = "Test"; ObjectID = "W30-VL-y8O"; */
+"W30-VL-y8O.text" = "Test";
+
+/* Class = "IBUILabel"; text = "Label"; ObjectID = "Ycb-yX-hlT"; */
+"Ycb-yX-hlT.text" = "Label";
+
+/* Class = "IBUIBarButtonItem"; title = "zurück"; ObjectID = "bI9-IZ-dh8"; */
+"bI9-IZ-dh8.title" = "zurück";
+
+/* Class = "IBUILabel"; text = "Hydrant hinzufügen"; ObjectID = "d2E-4F-bcJ"; */
+"d2E-4F-bcJ.text" = "Hydrant hinzufügen";
+
+/* Class = "IBUILabel"; text = "lblCopyright"; ObjectID = "jbS-rj-5cS"; */
+"jbS-rj-5cS.text" = "lblCopyright";
+
+/* Class = "IBUIViewController"; title = "Test"; ObjectID = "qwd-V9-Ch6"; */
+"qwd-V9-Ch6.title" = "Test";
+
+/* Class = "IBUILabel"; text = "lblHeaderText"; ObjectID = "xcg-re-vk5"; */
+"xcg-re-vk5.text" = "lblHeaderText";
+
+/* Class = "IBUILabel"; text = "lblVersion"; ObjectID = "yXv-oI-mkN"; */
+"yXv-oI-mkN.text" = "lblVersion";

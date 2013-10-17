@@ -21,6 +21,7 @@
 		3723B84517965E8000712A29 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3723B84317965E8000712A29 /* InfoPlist.strings */; };
 		3723B84717965E8000712A29 /* E_I_STests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3723B84617965E8000712A29 /* E_I_STests.m */; };
 		3723B85217967F4100712A29 /* HauptViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3723B85117967EDB00712A29 /* HauptViewController.m */; };
+		3737C81F180FE87E000B708B /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3737C81E180FE87E000B708B /* Crashlytics.framework */; };
 		373B94611798232E00F4E041 /* newHydrantViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 373B94601798232000F4E041 /* newHydrantViewController.m */; };
 		3748775B1796BADE004C58AB /* HydrantMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3748775A1796BA5E004C58AB /* HydrantMapViewController.m */; };
 		3748775D1796C76C004C58AB /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3748775C1796C76C004C58AB /* MapKit.framework */; };
@@ -61,6 +62,7 @@
 		3723B84617965E8000712A29 /* E_I_STests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = E_I_STests.m; sourceTree = "<group>"; };
 		3723B85017967EDB00712A29 /* HauptViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HauptViewController.h; sourceTree = "<group>"; };
 		3723B85117967EDB00712A29 /* HauptViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HauptViewController.m; sourceTree = "<group>"; };
+		3737C81E180FE87E000B708B /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		373B945F1798232000F4E041 /* newHydrantViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = newHydrantViewController.h; sourceTree = "<group>"; };
 		373B94601798232000F4E041 /* newHydrantViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = newHydrantViewController.m; sourceTree = "<group>"; };
 		374877591796BA5E004C58AB /* HydrantMapViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HydrantMapViewController.h; sourceTree = "<group>"; };
@@ -86,6 +88,7 @@
 			files = (
 				374877651797B4AC004C58AB /* libz.dylib in Frameworks */,
 				374877631797B4A1004C58AB /* SystemConfiguration.framework in Frameworks */,
+				3737C81F180FE87E000B708B /* Crashlytics.framework in Frameworks */,
 				3748775F1796D48E004C58AB /* CoreLocation.framework in Frameworks */,
 				3748775D1796C76C004C58AB /* MapKit.framework in Frameworks */,
 				3723B81E17965E7F00712A29 /* CoreGraphics.framework in Frameworks */,
@@ -129,6 +132,7 @@
 		3723B81A17965E7F00712A29 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3737C81E180FE87E000B708B /* Crashlytics.framework */,
 				374877641797B4AC004C58AB /* libz.dylib */,
 				374877621797B4A1004C58AB /* SystemConfiguration.framework */,
 				3748775E1796D48E004C58AB /* CoreLocation.framework */,
@@ -222,6 +226,7 @@
 				3723B81417965E7F00712A29 /* Sources */,
 				3723B81517965E7F00712A29 /* Frameworks */,
 				3723B81617965E7F00712A29 /* Resources */,
+				3737C81D180FE7D8000B708B /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -306,6 +311,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3737C81D180FE7D8000B708B /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Crashlytics.framework/run eda04ab06e2a11766ec144124d4262bf0abc06f6";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3723B81417965E7F00712A29 /* Sources */ = {
@@ -445,10 +466,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Martin Kuenz (994AZ7AHKS)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../../../Downloads",
+					/Users/stormtec/Desktop/Development/E.I.S,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "E.I.S/E.I.S-Prefix.pch";
@@ -459,6 +482,7 @@
 					"$(SRCROOT)/../../../Downloads/TestFlightSDK1",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -468,10 +492,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Martin Kuenz (994AZ7AHKS)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../../../Downloads",
+					/Users/stormtec/Desktop/Development/E.I.S,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "E.I.S/E.I.S-Prefix.pch";
@@ -482,6 +508,7 @@
 					"$(SRCROOT)/../../../Downloads/TestFlightSDK1",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

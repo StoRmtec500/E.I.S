@@ -8,13 +8,21 @@
 
 #import "AppDelegate.h"
 #import "HydrantMapViewController.h"
+#import <Crashlytics/Crashlytics.h>
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    [Crashlytics startWithAPIKey:@"eda04ab06e2a11766ec144124d4262bf0abc06f6"];
+    
     // Override point for customization after application launch.
     return YES;
+}
+
+-(void)applicationDidFinishLaunching:(UIApplication *)application
+{
+    [[Crashlytics sharedInstance] crash];
 }
 							
 - (void)applicationWillResignActive:(UIApplication *)application
